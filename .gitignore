@@ -1,0 +1,15 @@
+__pycache__/
+__pycache__
+.pytest_cache
+*.log
+
+.env
+.venv
+env/
+venv/
+sauce
+results
+temp
+
+.idea
+.vscode
