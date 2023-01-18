@@ -19,12 +19,12 @@ class MainPage(BasePage):
     def click_on_logo(self):
         """Метод перехода на главную страницу 'https://epolif.ru/' по нажатию на логотип в хэдере."""
         self.browser.find_element(*LOGO).click()
-        assert "epolif.ru" in self.browser.current_url, "Wrong page"
+        assert self.element_is_present(*VIDEO), "Not main page"
 
-    def go_to_main_page(self):
-        """Метод перехода на главную страницу 'https://epolif.ru/' по нажатию на ссылку Главная в хэдере"""
-        self.browser.find_element(*LINK_MAIN).click()
-        assert "epolif.ru" in self.browser.current_url, "Wrong page"
+    # def go_to_main_page(self):
+    #     """Метод перехода на главную страницу 'https://epolif.ru/' по нажатию на ссылку Главная в хэдере"""
+    #     self.browser.find_element(*LINK_MAIN).click()
+    #     assert self.element_is_present(*VIDEO), 'Not main page'
 
     def go_to_aqua_page(self):
         """Метод перехода на  страницу 'https://epolif.ru/epolif-aqua/' по нажатию на ссылку Epolif Aqua в хэдере"""
