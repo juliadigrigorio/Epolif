@@ -9,6 +9,7 @@ LINK_GL21 = (By.CSS_SELECTOR, "#menu-item-7938 > a")
 LINK_ACP1 = (By.CSS_SELECTOR, "#menu-item-7950 > a")
 FOOTER_ABOUT = (By.ID, "page-footer")
 UP_BUTTON = (By.CSS_SELECTOR, "body > a.w-toplink.pos_right.active")
+LOGO = (By.XPATH, "//div/a/img[1]")
 
 
 class BasePage:
@@ -23,6 +24,11 @@ class BasePage:
         except NoSuchElementException:
             return False
         return True
+
+    def click_on_logo(self):
+        """Метод перехода на главную страницу 'https://epolif.ru/' по нажатию на логотип в хэдере."""
+        self.browser.find_element(*LOGO).click()
+        assert self.element_is_present(*VIDEO), "Not main page"
 
     def go_to_main_page(self):
         """Метод перехода на главную страницу 'https://epolif.ru/' по нажатию на ссылку Главная в хэдере"""

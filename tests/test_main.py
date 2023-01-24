@@ -1,6 +1,4 @@
-import pytest
 from pages.main_page import MainPage
-import time
 
 
 link = "https://epolif.ru/"
@@ -8,9 +6,9 @@ link = "https://epolif.ru/"
 """TC-001-02 | Main page > Logo in the header"""
 
 
-def test_click_on_logo(browser):
+def test_click_on_logo_main(browser):
     page = MainPage(browser, link)
-    page.click_on_logo()
+    page.click_on_logo_main()
 
 
 """TC-001-03 | Main page > link Главная in the header"""
@@ -71,7 +69,7 @@ def test_up_button(browser):
     page.chains_down()
     page.up_button()
     page.should_be_hover()
-    page.click_up_button()
+    page.click_up_button_main()
 
 
 """TC-001-01 | Main page > Presence of the promo video"""
