@@ -70,5 +70,3 @@ class BasePage:
         """Метод проверки активности кнопки Вверх в футере"""
         cssValue = self.browser.find_element(*UP_BUTTON).value_of_css_property("cursor")
         assert cssValue == "pointer"
-
-
