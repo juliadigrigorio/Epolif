@@ -21,3 +21,58 @@ def test_go_to_main_page_from_aqua(browser):
     page.go_to_aqua_page()
     page = Aqua_Page(browser, link)
     page.go_to_main_page()
+
+"""TC-002-03 | Epolif aqua > link Epolif Aqua in the header"""
+
+def test_go_to_aqua_page_from_aqua(browser):
+    page = MainPage(browser, link)
+    page.go_to_aqua_page()
+    page = Aqua_Page(browser, link)
+    page.go_to_aqua_page()
+
+"""TC-002-04 | Epolif aqua > link Epolif GL7 in the header"""
+
+def test_go_to_GL7_from_aqua(browser):
+    page = MainPage(browser, link)
+    page.go_to_aqua_page()
+    page = Aqua_Page(browser, link)
+    page.go_to_gl7_page()
+
+"""TC-002-05 | Epolif aqua > link Epolif GL21 in the header"""
+
+def test_go_to_GL21_from_aqua(browser):
+    page = MainPage(browser, link)
+    page.go_to_aqua_page()
+    page = Aqua_Page(browser, link)
+    page.go_to_gl21_page()
+
+"""TC-002-06 | Epolif aqua > link Epolif ACP1 in the header"""
+
+def test_go_to_ACP1_from_aqua(browser):
+    page = MainPage(browser, link)
+    page.go_to_aqua_page()
+    page = Aqua_Page(browser, link)
+    page.go_to_ACP1_page()
+
+"""TC-002-08 | Epolif aqua > footer > information about company"""
+
+def test_footer_information_aqua(browser):
+    page = MainPage(browser, link)
+    page.go_to_aqua_page()
+    page = Aqua_Page(browser, link)
+    page.chains_down()
+    page.footer_information()
+    page.footer_information_check()
+
+"""TC-002-09 | Epolif aqua > footer > Up button"""
+
+def test_up_button_aqua(browser):
+    page = MainPage(browser, link)
+    page.go_to_aqua_page()
+    page = Aqua_Page(browser, link)
+    page.chains_down()
+    page.up_button()
+    page.should_be_hover()
+    page.click_up_button_aqua()
+
+

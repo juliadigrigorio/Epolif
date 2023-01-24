@@ -56,8 +56,9 @@ def test_go_to_ACP1_page(browser):
 """TC-001-10 | Main page > footer > information about company"""
 
 
-def test_footer_information(browser):
+def test_footer_information_main(browser):
     page = MainPage(browser, link)
+    page.chains_down()
     page.footer_information()
     page.footer_information_check()
 
