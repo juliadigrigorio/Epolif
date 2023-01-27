@@ -1,59 +1,47 @@
 from pages.main_page import MainPage
+import allure
 
 
 link = "https://epolif.ru/"
 
-"""TC-001-02 | Main page > Logo in the header"""
 
-
+@allure.story("TC-001-02 | Main page > Logo in the header")
 def test_click_on_logo_main(browser):
     page = MainPage(browser, link)
     page.click_on_logo_main()
 
 
-"""TC-001-03 | Main page > link Главная in the header"""
-
-
+@allure.story("TC-001-03 | Main page > link Главная in the header")
 def test_go_to_main_page(browser):
     page = MainPage(browser, link)
     page.go_to_main_page()
 
 
-"""TC-001-04 | Main page > link Epolif Aqua in the header"""
-
-
+@allure.story("TC-001-04 | Main page > link Epolif Aqua in the header")
 def test_go_to_aqua_page(browser):
     page = MainPage(browser, link)
     page.go_to_aqua_page()
 
 
-"""TC-001-05 | Main page > link Epolif GL7 in the header"""
-
-
+@allure.story("TC-001-05 | Main page > link Epolif GL7 in the header")
 def test_go_to_gl7_page(browser):
     page = MainPage(browser, link)
     page.go_to_gl7_page()
 
 
-"""TC-001-06 | Main page > link Epolif GL21 in the header"""
-
-
+@allure.story("TC-001-06 | Main page > link Epolif GL21 in the header")
 def test_go_to_gl21_page(browser):
     page = MainPage(browser, link)
     page.go_to_gl21_page()
 
 
-"""TC-001-07 | Main page > link Epolif ACP1 in the header"""
-
-
-def test_go_to_ACP1_page(browser):
+@allure.story("TC-001-07 | Main page > link Epolif ACP1 in the header")
+def test_go_to_acp1_page(browser):
     page = MainPage(browser, link)
-    page.go_to_ACP1_page()
+    page.go_to_acp1_page()
 
 
-"""TC-001-10 | Main page > footer > information about company"""
-
-
+@allure.story("TC-001-10 | Main page > footer > information about company")
 def test_footer_information_main(browser):
     page = MainPage(browser, link)
     page.chains_down()
@@ -61,9 +49,7 @@ def test_footer_information_main(browser):
     page.footer_information_check()
 
 
-"""TC-001-11 | Main page > footer > Up button"""
-
-
+@allure.story("TC-001-11 | Main page > footer > Up button")
 def test_up_button(browser):
     page = MainPage(browser, link)
     page.chains_down()
@@ -72,9 +58,7 @@ def test_up_button(browser):
     page.click_up_button_main()
 
 
-"""TC-001-01 | Main page > Presence of the promo video"""
-
-
+@allure.story("TC-001-01 | Main page > Presence of the promo video")
 def test_video(browser):
     page = MainPage(browser, link)
     page.presence_of_the_video()

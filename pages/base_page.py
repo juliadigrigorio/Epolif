@@ -8,7 +8,7 @@ LINK_GL7 = (By.CSS_SELECTOR, "#menu-item-7932 > a")
 LINK_GL21 = (By.CSS_SELECTOR, "#menu-item-7938 > a")
 LINK_ACP1 = (By.CSS_SELECTOR, "#menu-item-7950 > a")
 FOOTER_ABOUT = (By.ID, "page-footer")
-UP_BUTTON = (By.CSS_SELECTOR, "body > a.w-toplink.pos_right.active")
+UP_BUTTON = (By.XPATH, "/html/body/a[1]")
 LOGO = (By.XPATH, "//div/a/img[1]")
 
 
@@ -50,7 +50,7 @@ class BasePage:
         self.browser.find_element(*LINK_GL21).click()
         assert "epolif-gl-21/" in self.browser.current_url, "Wrong page"
 
-    def go_to_ACP1_page(self):
+    def go_to_acp1_page(self):
         """Метод перехода на  страницу 'https://epolif.ru/epolif-acp-1/' по нажатию на ссылку Epolif ACP1 в хэдере"""
         self.browser.find_element(*LINK_ACP1).click()
         assert "epolif-acp-1/" in self.browser.current_url, "Wrong page"

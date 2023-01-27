@@ -5,7 +5,7 @@ UP_BUTTON = (By.CSS_SELECTOR, "body > a.w-toplink.pos_right.active")
 
 
 class GL7_Page(BasePage):
-    def click_up_button_GL7(self):
+    def click_up_button_gl7(self):
         """Метод проверки работы кнопки Вверх в футере"""
         self.browser.find_element(*UP_BUTTON).click()
         is_up_button_works = self.browser.find_element(*UP_BUTTON).get_attribute("href")
