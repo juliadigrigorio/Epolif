@@ -8,7 +8,7 @@ LINK_GL7 = (By.CSS_SELECTOR, "#menu-item-7932 > a")
 LINK_GL21 = (By.CSS_SELECTOR, "#menu-item-7938 > a")
 LINK_ACP1 = (By.CSS_SELECTOR, "#menu-item-7950 > a")
 FOOTER_ABOUT = (By.ID, "page-footer")
-UP_BUTTON = (By.XPATH, '/html/body/a[1]')
+UP_BUTTON = (By.XPATH, "/html/body/a[1]")
 LOGO = (By.XPATH, "//div/a/img[1]")
 
 
