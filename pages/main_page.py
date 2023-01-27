@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 
 LOGO_MAIN = (By.XPATH, "//img[2]")
-UP_BUTTON = (By.CSS_SELECTOR, "body > a.w-toplink.pos_right.active")
+UP_BUTTON = (By.XPATH, '/html/body/a[1]')
 VIDEO = (By.XPATH, "//video")
 
 
