@@ -1,7 +1,7 @@
 import logging
 
 logging.basicConfig(
-    level="DEBUG",
+    level="INFO",
     filename="Mylog.log",
     filemode="w",
     format="%(asctime)s::%(levelname)s::%(message)s",
