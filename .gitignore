@@ -13,3 +13,6 @@ temp
 
 .idea
 .vscode
+
+allure-results/
+tests/allure-results/
