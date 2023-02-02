@@ -1,15 +1,15 @@
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
-LINK_MAIN = (By.CSS_SELECTOR, "#menu-item-7921 > a")
+LINK_MAIN = (By.XPATH, "//span[text()='Главная']")
 VIDEO = (By.XPATH, "//video")
-LINK_AQUA = (By.CSS_SELECTOR, "#menu-item-7920 > a")
-LINK_GL7 = (By.CSS_SELECTOR, "#menu-item-7932 > a")
-LINK_GL21 = (By.CSS_SELECTOR, "#menu-item-7938 > a")
-LINK_ACP1 = (By.CSS_SELECTOR, "#menu-item-7950 > a")
+LINK_AQUA = (By.XPATH, "//span[text()='Epolif Aqua']")
+LINK_GL7 = (By.XPATH, "//span[text()='Epolif GL 7']")
+LINK_GL21 = (By.XPATH, "//span[text()='Epolif GL 21']")
+LINK_ACP1 = (By.XPATH, "//span[text()='Epolif ACP 1']")
 FOOTER_ABOUT = (By.ID, "page-footer")
-UP_BUTTON = (By.XPATH, "/html/body/a[1]")
-LOGO = (By.XPATH, "//div/a/img[1]")
+UP_BUTTON = (By.XPATH, "//a[@title='Наверх']")
+LOGO = (By.XPATH, "//a[@aria-label='Ссылка']")
 
 
 class BasePage:
