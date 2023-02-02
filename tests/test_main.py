@@ -8,7 +8,7 @@ link = "https://epolif.ru/"
 @allure.story("TC-001-02 | Main page > Logo in the header")
 def test_click_on_logo_main(browser):
     page = MainPage(browser, link)
-    page.click_on_logo_main()
+    page.click_on_logo()
 
 
 @allure.story("TC-001-03 | Main page > link Главная in the header")
