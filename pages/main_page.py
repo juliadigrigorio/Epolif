@@ -8,7 +8,7 @@ VIDEO = (By.XPATH, "//video")
 
 class MainPage(BasePage):
     def click_up_button_main(self):
-        """Метод проверки работы кнопки Вверх в футере."""
+        """Метод проверки работы кнопки Вверх в футере"""
         self.browser.find_element(*UP_BUTTON).click()
         is_up_button_works = self.browser.find_element(*UP_BUTTON).get_attribute("href")
         assert is_up_button_works == "https://epolif.ru/#"
