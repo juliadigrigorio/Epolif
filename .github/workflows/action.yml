@@ -9,6 +9,8 @@ permissions:
   pull-requests: write
   contents: read
 
+description:
+runs:
 jobs:
   selenium_test:
     runs-on: ubuntu-latest
@@ -71,6 +73,6 @@ jobs:
         if: always()
         uses: peaceiris/actions-gh-pages@v2
         env:
-#          PERSONAL_TOKEN: ${{ secrets.ALLURE_DEPLOY  }}
+          PERSONAL_TOKEN: ${{ secrets.EPOLIF_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
